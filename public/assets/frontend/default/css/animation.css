@@ -1,0 +1,30 @@
+.animation {
+      position: relative;
+  }
+  
+  .animation::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0; /* Initial width is 0 */
+      height: 3px; /* Adjust the underline height as needed */
+      background-color: #422bd4; /* Initial color */
+      animation: underline-color 2s linear infinite;
+  }
+  
+  @keyframes underline-color {
+      0% {
+          width: 0;
+          background-color: #3076cf; /* Start color */
+      }
+      50%{
+        width:50%;
+        background-color: #38c751;
+        
+      }
+      100% {
+          width: 100%; /* Full width */
+          background-color: #342dd2; /* End color */
+      }
+  }
